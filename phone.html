@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Story Phone</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="phone">
+
+    <!-- SCREEN WRAPPER -->
+    <div class="screen-wrapper">
+
+        <!-- HOME -->
+        <div id="homeScreen" class="screen active">
+             <!-- STATUS BAR -->
+    <div class="status-bar">
+        <span>9:41</span>
+        <span>📶 4G 🔋</span>
+    </div>
+
+            <div class="app-grid">
+
+                <div class="app" onclick="openApp('Whatsapp')">
+                    <div class="icon">💬</div>
+                    <div class="label">WhatsApp</div>
+                </div>
+
+                <div class="app" onclick="openApp('Spotify')">
+                    <div class="icon">🎵</div>
+                    <div class="label">Spotify</div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- WHATSAPP -->
+        <div id="Whatsapp" class="screen">
+
+            <div class="top-bar">
+                <button onclick="goHome()">←</button>
+                WhatsApp
+            </div>
+
+            <div class="contact" onclick="openApp('jasonChat')">
+                <img src="jason.jpg">
+                <div>
+                    <div>Jason</div>
+                    <div class="preview">Check the news.</div>
+                </div>
+            </div>
+
+            <div class="contact" onclick="openApp('alexChat')">
+                <img src="alex.jpg">
+                <div>
+                    <div>Alex</div>
+                    <div class="preview">Something weird happened.</div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- JASON CHAT -->
+        <div id="jasonChat" class="screen">
+
+            <div class="top-bar">
+                <button onclick="openApp('Whatsapp')">←</button>
+                Jason
+            </div>
+
+            <div class="chat">
+                <div class="msg other">Did you see what happened today?</div>
+                <div class="msg me">No?? What are you talking about?</div>
+                <div class="msg other">Check the news.</div>
+            </div>
+
+        </div>
+
+        <!-- ALEX CHAT -->
+        <div id="alexChat" class="screen">
+
+            <div class="top-bar">
+                <button onclick="openApp('Whatsapp')">←</button>
+                Alex
+            </div>
+
+            <div class="chat">
+                <div class="msg other">Something weird is happening tonight.</div>
+                <div class="msg me">What do you mean?</div>
+                <div class="msg other">Lights over downtown.</div>
+            </div>
+
+        </div>
+
+        <!-- SPOTIFY -->
+        <div id="Spotify" class="screen spotify">
+
+            <div class="spotify-header">
+                <div>Spotify</div>
+                <div>🔍 ⚙️</div>
+            </div>
+
+            <!-- SCROLLABLE LIST -->
+            <div class="playlist">
+
+                <div class="song" onclick="playSong('class clown.mp3','Class Clown')">
+                    <div>
+                        <div class="title">Class Clown</div>
+                        <div class="artist">Conan Gray</div>
+                    </div>
+                    <div class="play">▶</div>
+                </div>
+
+
+                <div class="song" onclick="playSong('better than revenge.mp3','Better Than Revenge')">
+                    <div>
+                        <div class="title">Better Than Revenge</div>
+                        <div class="artist">Taylor Swift</div>
+                    </div>
+                    <div class="play">▶</div>
+                </div>
+
+                <div class="song" onclick="playSong('almost.mp3','Almost Sweet Music')">
+                    <div>
+                        <div class="title">Almost(Sweet Music)</div>
+                        <div class="artist">Hozier</div>
+                    </div>
+                    <div class="play">▶</div>
+                </div>
+
+                <div class="song" onclick="playSong('Night Changes.mp3','Night Changes')">
+                    <div>
+                        <div class="title">Night Changes</div>
+                        <div class="artist">One Direction</div>
+                    </div>
+                    <div class="play">▶</div>
+                </div>
+
+                <div class="song" onclick="playSong('Dont Blame Me.mp3','Dont Blame Me')">
+                    <div>
+                        <div class="title">Don't Blame Me</div>
+                        <div class="artist">Taylor Swift</div>
+                    </div>
+                    <div class="play">▶</div>
+                </div>
+
+                <div class="song" onclick="playSong('End Game.mp3','End Game')">
+                    <div>
+                        <div class="title">End Game</div>
+                        <div class="artist">Taylor Swift</div>
+                    </div>
+                    <div class="play">▶</div>
+                </div>
+
+                <div class="song" onclick="playSong('Little Miss Perfect.mp3','Little Miss Perfect')">
+                    <div>
+                        <div class="title">Little Miss Perfect</div>
+                        <div class="artist">Write Out Loud</div>
+                    </div>
+                    <div class="play">▶</div>
+                </div>
+                
+                <div class="song" onclick="playSong('Gorgeous.mp3','Gorgeous')">
+                    <div>
+                        <div class="title">Gorgeous</div>
+                        <div class="artist">Taylor Swift</div>
+                    </div>
+                    <div class="play">▶</div>
+                </div>
+
+                <div class="song" onclick="playSong('top of my school.mp3','Top Of My School')">
+                    <div>
+                        <div class="title">Top Of My School</div>
+                        <div class="artist">Katherine Lynn-Rose</div>
+                    </div>
+                    <div class="play">▶</div>
+                </div>
+
+            </div>
+
+            <!-- PLAYER -->
+            <div class="player">
+                <div id="nowPlaying">Nothing playing</div>
+                <audio id="audioPlayer" controls></audio>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- HOME BUTTON -->
+    <div class="bottom-bezel">
+        <div class="home-button" onclick="goHome()"></div>
+    </div>
+
+</div>
+
+<script src="phone.js"></script>
+
+</body>
+</html>
